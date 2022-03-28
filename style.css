@@ -18,7 +18,7 @@ html{
     height: 100%;
 }
 body{
-    background-color: #E5E5E5;
+    background-color: #f8f8f8;
     font-family: 'Noto+Sans';
     min-height: 100%;
     display: flex;
@@ -56,6 +56,7 @@ body{
     font-weight: 400;
     font-size: 19px;
     line-height: 28px;
+    color: black;
 }
 /*------HEADER----------------------------------------------------*/
 
@@ -101,7 +102,7 @@ body{
 .header-text > *{
     margin: 0px 12px 0px 24px;
 }
-.header-button {
+.button{
     background-color: #198C36;
     border-radius: 160px;
     padding: 15px 24px;
@@ -248,10 +249,16 @@ body{
 }
 .employees-content {
     padding: 119px 0px;
+    margin: 0px 0px 130px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+@media (max-width: 600px){
+    .employees-content{
+    margin: 0px 0px 100px 0px;
+    }
 }
 .employees-text {
     text-align: center;
@@ -262,4 +269,210 @@ body{
 }
 .employees-img img{
     max-width: 100%;
+}
+.scenes {
+}
+.scenes-container {
+}
+.scenes-content {
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.scenes-text {
+    max-width: 350px;
+    margin: 0px 90px 0px 0px;
+}
+.scenes-img {
+}
+.scenes-img img{
+    max-width: 100%;
+}
+@media (max-width: 938px){
+    .scenes-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .scenes-text{
+        max-width: 80%;
+        text-align: center;
+        margin: 0px 0px 20px 0px;
+    }
+}
+.interest {
+}
+.interest-container {
+}
+.interest-content {
+    margin: 0px 0px 100px 0px;
+}
+.interest-text {
+    text-align: center;
+    padding: 20px;
+}
+.interest-card {
+    padding: 0px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 350px));
+    grid-template-rows: repeat(auto-fill, 1fr);
+    justify-content: center;
+    align-items: start;
+    grid-gap: 20px;
+}
+.interest-item {
+    box-shadow: 7px 7px 20px 1px #d4d8cb;
+    grid-gap: 20px;
+    background-color: rgb(255, 249, 241);
+    border-radius: 10px;
+    padding: 40px 38px;
+}
+.interest-item img{
+    margin-bottom: 20px;
+}
+.interest-item h3{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+}
+.interest-list {
+    padding-left: 17px;
+}
+.interest-list :not(:last-child){
+    margin: 0px 0px 15px 0px;
+}
+.buy {
+    background: #F2EFE6;
+}
+.buy-container {
+}
+.buy-content {
+    padding: 120px 0px;
+    margin-bottom: 120px;
+}
+.buy-text {
+    text-align: center;
+}
+.buy-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+.buy-card img{
+    object-fit: contain;
+}
+.buy-item {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.item-text {
+    text-align: center;
+    padding: 20px;
+}
+.item-text p{
+    margin: 0px 0px 10px 0px;
+}
+.item-text h3{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+    margin: 0px;
+}
+.buy-vector {
+    text-align: center;
+    padding: 20px 40px;
+    max-width: 300px;
+    position: relative;
+}
+.buy-vector p{
+    margin: 0px 0px 10px 0px;
+}
+.buy-vector h3{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+    margin: 0px;
+}
+.vector{
+    position: absolute;
+    left: 0;
+    top: -10%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.buy-button {
+    text-align: center;
+}
+@media (max-width: 600px){
+    .buy-card{
+        flex-direction: column;
+    }
+    .buy-item{
+        flex-direction: column;
+    }
+    .arrow{
+        content: '';
+        transform: rotate(90deg);
+    }
+}
+@media (max-width: 900px){
+    .vector{
+        max-width: 80%;
+        left: 10%;
+    }
+}
+.book {
+}
+.book-container {
+}
+.book-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.book-text {
+    padding: 15px;
+    max-width: 400px;
+}
+.book-text :not(:last-child){
+    margin-bottom: 20px;
+}
+.book-button {
+}
+.button {
+}
+.book-img {
+}
+.book-img img{
+    max-width: 100%;
+}
+@media (max-width: 768px){
+    .book-content{
+        flex-direction: column;
+    }
+    .book-text{
+        text-align: center;
+        max-width: 80%;
+    }
+}
+.started {
+    background-color: #163A24;
+    padding: 120px 0px;
+    background-image: url(/assets/img/left.png), url(/assets/img/right.png);
+    background-repeat: no-repeat;
+    background-position: 0% 100%, 100% 100%;
+    background-size: auto auto;
+}
+.started-content {
+    text-align: center;
+}
+.started-text :not(:last-child){
+    margin-bottom: 20px;
+}
+.started-button {
+    background-color: #FAB5A0;
+    color: #163A24;
 }
