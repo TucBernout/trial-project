@@ -467,7 +467,7 @@ body{
 .started {
     background-color: #163A24;
     padding: 120px 0px;
-    background-image: url(/assets/img/left.png), url(/assets/img/right.png);
+    background-image: url(assets/img/left.png), url(assets/img/right.png);
     background-repeat: no-repeat;
     background-position: 0% 100%, 100% 100%;
     background-size: auto auto;
@@ -528,7 +528,7 @@ body{
     border: 1px solid #ffffff;
 }
 .form-input-body input:focus{
-    outline: none; 
+    outline: none;
 }
 .form-button {
     background-color: #15762E;
