@@ -3,9 +3,6 @@
     margin: 0px;
     padding: 0px;
 }
-img{
-    vertical-align: top;
-}
 button{
     padding: 0;
     border: none;
@@ -13,6 +10,20 @@ button{
     color: inherit;
     background-color: transparent;
     cursor: pointer;
+}
+a::after{
+    content: '';
+    position: relative;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #18b13e;
+    transition: 0.4s;
+}
+a:hover:after{
+    width: 100%;
+    left: 0%;
 }
 html{
     height: 100%;
@@ -61,7 +72,6 @@ body{
 /*------HEADER----------------------------------------------------*/
 
 .header {
-
     background-color: #163A24;
 }
 .header-container{
@@ -99,18 +109,28 @@ body{
     font-size: 16px;
     line-height: 22px;
 }
+.header-text a{
+    text-decoration: none;
+    color: #ffffff;
+}
 .header-text > *{
     margin: 0px 12px 0px 24px;
 }
 .button{
-    background-color: #198C36;
+    background-color: #22c54b;
     border-radius: 160px;
     padding: 15px 24px;
     color: #FBFAF7;
     font-size: 16px;
     line-height: 22px;
+    text-align: center;
+    min-height: 52px;
+    transition: 0.5s;
 }
-
+.button:hover{
+    background-color: #be0dcabf;
+    box-shadow: 2px 2px 20px 3px #0b4d1b;
+}
 /*------MAIN----------------------------------------------------*/
 
 .page{
@@ -203,11 +223,13 @@ body{
 }
 .partner-img img{
     max-width: 100%;
+    transition: 0.5s;
+}
+.partner-img img:hover{
+    transform: scale(1.2);
 }
 .production {
     background-color: #163A24;
-}
-.production-container {
 }
 .production-content {
     display: grid;
@@ -217,9 +239,6 @@ body{
 .production-title {
     padding: 60px 0px 0px 0px;
     text-align: center;
-}
-.production-item{
-
 }
 .production-card {
     padding: 50px 0px 120px 0px;
@@ -231,6 +250,10 @@ body{
 }
 .production-img {
     margin: 0px 0px 18px 0px;
+    transition: 0.5s;
+}
+.production-img:hover{
+    transform: scale(1.2);
 }
 .list-item {
     color: #FBFAF7;
@@ -244,8 +267,6 @@ body{
 }
 .employees {
     background: #F2EFE6;
-}
-.employees-container {
 }
 .employees-content {
     padding: 119px 0px;
@@ -270,10 +291,6 @@ body{
 .employees-img img{
     max-width: 100%;
 }
-.scenes {
-}
-.scenes-container {
-}
 .scenes-content {
     margin-bottom: 100px;
     display: flex;
@@ -284,8 +301,6 @@ body{
 .scenes-text {
     max-width: 350px;
     margin: 0px 90px 0px 0px;
-}
-.scenes-img {
 }
 .scenes-img img{
     max-width: 100%;
@@ -300,10 +315,6 @@ body{
         text-align: center;
         margin: 0px 0px 20px 0px;
     }
-}
-.interest {
-}
-.interest-container {
 }
 .interest-content {
     margin: 0px 0px 100px 0px;
@@ -327,6 +338,10 @@ body{
     background-color: rgb(255, 249, 241);
     border-radius: 10px;
     padding: 40px 38px;
+    transition: 0.5s;
+}
+.interest-item:hover{
+    transform: scale(1.1);
 }
 .interest-item img{
     margin-bottom: 20px;
@@ -344,8 +359,6 @@ body{
 }
 .buy {
     background: #F2EFE6;
-}
-.buy-container {
 }
 .buy-content {
     padding: 120px 0px;
@@ -425,8 +438,7 @@ body{
     }
 }
 .book {
-}
-.book-container {
+    margin-bottom: 100px;
 }
 .book-content {
     display: flex;
@@ -439,12 +451,6 @@ body{
 }
 .book-text :not(:last-child){
     margin-bottom: 20px;
-}
-.book-button {
-}
-.button {
-}
-.book-img {
 }
 .book-img img{
     max-width: 100%;
@@ -475,4 +481,155 @@ body{
 .started-button {
     background-color: #FAB5A0;
     color: #163A24;
+}
+.form {
+    background-color: #F2EFE6;
+    padding: 45px 0px;
+    margin: 0px 0px 20px 0px;
+}
+.form-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-text {
+    padding: 15px;
+    flex: 0 1 50%;
+}
+.form-text h2{
+    margin: 0px 0px 10px 0px;
+}
+.form-input {
+    flex: 0 1 50%;
+    padding: 15px 50px;
+}
+.form-input span{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+.form-input a{
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    text-decoration: none;
+    color: #198C36;
+}
+.form-input-body{
+    margin: 0px 0px 15px 0px;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 255px;
+    max-height: 54px;
+}
+.form-input-body .input{
+    flex: 1 1 auto;
+    border-radius: 255px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+}
+.form-input-body input:focus{
+    outline: none; 
+}
+.form-button {
+    background-color: #15762E;
+}
+@media (max-width: 730px){
+    .form-content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .form-input-body{
+        margin: 0 auto;
+        width: 70%;
+    }
+    .form-input-body .input{
+        width: 100%;
+    }
+    .form-button{
+        padding: 10px 20px;
+    }
+}
+.footer {
+    margin: 0px 0px 20px 0px;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+}
+.footer-networks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    margin: 0px 0px 20px 0px;
+}
+.logo {
+    padding: 15px;
+}
+.footer-networks p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    padding: 15px;
+}
+.networks-icon {
+    display: flex;
+    padding: 15px;
+}
+.icon {
+    fill: #198C36;
+    transition: 0.3s;
+}
+.icon:hover{
+    content: '';
+    transform: scale(1.5);
+    fill: #d83333;
+}
+.icon:not(:last-child){
+    margin: 0px 15px 0px 0px;
+}
+.footer-license {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+}
+.footer-license p{
+    flex: 1 1 50%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+.license-list {
+    justify-content: flex-end;
+    flex: 1 1 50%;
+    display: flex;
+    list-style: none;
+}
+
+.license-item:not(:last-child){
+    margin: 0px 15px 0px 0px;
+}
+
+.item-link{
+    text-decoration: none;
+    color: #198C36;
+}
+@media (max-width: 830px){
+    .footer-networks{
+        flex-direction: column;
+        margin: 10px 0px;
+    }
+    .footer-license{
+        text-align: center;
+        flex-direction: column;
+        margin: 10px 0px;
+    }
+    .license-list{
+        flex-direction: column;
+    }
+    .license-item:not(:last-child){
+        margin: 10px 0px 0px 0px;
+    }
 }
